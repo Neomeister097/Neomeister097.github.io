@@ -10,25 +10,73 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="PBCicon.png">
+    <link rel="icon" type="image/x-icon" href="images\PBCicon.png">
     <title>Pugon Biz Co.</title>
     <style>
         body {
-            background-image: url(bg.png);
+            position: relative;
+            background-image: url(images/bg.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
         }
+
+        #navbar {
+            background: linear-gradient(to right, orange, rgb(233, 175, 68), rgb(212, 179, 117));}
+
+        .nav-item:hover {
+            background-color: black;
+            color:aliceblue
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+
+        #form {
+            border-radius: 10px 10px 10px 10px;
+            background: linear-gradient(to right, orange, rgb(233, 175, 68), rgb(212, 179, 117));
+        }
+
+        a {
+            text-decoration: solid black;
+        }
+
+        p.sign-up {
+            text-align: center;
+        }
+
+        #pbg {
+            color: aliceblue;
+        }
+
+        a.nav-link.active:hover {
+            color: aliceblue;
+        }
+
+        a.nav-link:hover {
+            color: aliceblue;
+        }
+
+        form {
+            border-radius: 10px 10px 10px 10px;
+            background: linear-gradient(to right, orange, rgb(233, 175, 68), rgb(212, 179, 117));
+        }
+
+        a.nav-link.disabled {
+            color: aliceblue;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" id="navbar">
             <a 
                 class="navbar-brand" 
-                href="index.html">
+                href="indext.html">
                 <img
-                src="PBCicon.png"
+                src="images\PBCicon.png"
                 alt="logo"
                 style="width: 35px"/>Pugon Biz Co.
             </a>
@@ -41,13 +89,16 @@
             <div class="collapse navbar-collapse" id="navbar-resto">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="menu.html">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sign-up.html">Membership</a>
+                        <a class="nav-link active" href="sign-up.html">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="reset.html" tabindex="-1">Account settings</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -55,13 +106,150 @@
                     type="search"
                     class="form-control"
                     placeholder="Are you craving for...?"/>
-                    <button class="btn btn-outline-warning" type="submit">
-                        Search
+                    <button class="btn btn-outline-dark" type="submit">
+                        <a href="menu.html">Search</a>
                     </button>
                 </form>
             </div>
         </div>
     </nav>
-    <h1>membership</h1>
+    <!-- header -->
+    <div class="container pt-3 mt-5">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <img src="images/PBC.png" alt="PugonBizCo Details" style="height: 50%">
+            </div>
+        </div>
+    </div>
+    <!-- sign up form -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Q29TbflauIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <video width="570" height="350" controls>
+                    <source src="videos/pizza.mp4" type="video/mp4">
+                    <source src="videos/pizza.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                  </video>
+            </div>
+            <div class="col-lg-6">
+                <form>
+                    <h1>Sign up here!</h1>
+                    <div class="form-group">
+                        <ul>
+                            <li>
+                                <label for="username">Username:</label>
+                                <input 
+                                    type="username"
+                                    class="form-control"
+                                    id="username"
+                                    placeholder="ex. jhon23">
+                            </li>
+                            <li>
+                                <label for="first-name">First name:</label>
+                                <input 
+                                    type="name"
+                                    class="form-control"
+                                    id="first-name"
+                                    placeholder="ex. Jhon">
+                            </li>
+                            <li>
+                                <label for="last-name">Last name:</label>
+                                <input 
+                                type="name"
+                                class="form-control"
+                                id="last-name"
+                                placeholder="ex. Le Cross">
+                            </li>
+                            <li>
+                                <label for="pwd">Password:</label>
+                                <input 
+                                    type="password"
+                                    class="form-control"
+                                    id="pwd"
+                                    placeholder="no special characters">
+                            </li>
+                            <li>
+                                <label for="con-pwd">Confirm password:</label>
+                                    <input 
+                                        type="password"
+                                        class="form-control"
+                                        id="con-pwd"
+                                        placeholder="re-enter password">
+                            </li>
+                            <li>
+                                <label for="gender">Gender:</label>
+                                    <ul class="radio">
+                                        <li><input type="radio"
+                                            name="choose">Male</li>
+                                        <li><input type="radio"
+                                            name="choose">Female</li>
+                                        <li><input type="radio"
+                                            name="choose">Other</li>
+                                    </ul>
+                            </li>
+                            <li>
+                                <label for="address">Address:</label>
+                                <input 
+                                    type="text"
+                                    class="form-control"
+                                    id="address"
+                                    placeholder="#123 Pob 4 Dasmarinias Cavite">
+                            </li>
+                            <li>
+                                <label for="text">Payment method</label>
+                                    <ul class="radio">
+                                        <li><input type="radio"
+                                            name="choose">Cash</li>
+                                        <li><input type="radio"
+                                            name="choose" placeholder="enter gcash number">GCash</li>
+                                        <li><input type="radio"
+                                            name="choose" placeholder="specify method">Other</li>
+                                    </ul>
+                            </li>
+                            <li>
+                                <label for="file">Upload account photo:</label> <input 
+                                    id="file" 
+                                    type="file">
+                            </li>
+                            <li>
+                                <button 
+                                    type="submit" 
+                                    class="btn btn-outline-dark">Submit info
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid text-center bg-dark">
+            <div class="row">
+                <div class="col-lg-12" id="pbg">
+                    <h1><img src="images\pbcicon.png" alt="logo" style="width: 50px">pugonbizco@gmail.com | +63 956 7960 321</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5"></div>
+                <div class="col-lg-7 pe-3">
+                    <a href="https://www.facebook.com/neomeister">
+                    <img src="images\fb.png" alt="facebook page" style="width: 35px">
+                    </a>
+                    <a href="https://twitter.com/?lang=en">
+                    <img src="images\twtr.png" alt="twiter page" style="width: 30px">
+                    </a>
+                    <a href="https://www.instagram.com/neobrucal/">
+                    <img src="images\ig.png" alt="instagram page" style="width: 4.5%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
