@@ -14,19 +14,21 @@
     <title>Pugon Biz Co.</title>
     <style>
         body {
+            color: white;
+            font-family: Copperplate, Papyrus, fantasy;
             position: relative;
-            background-image: url(images/bg.png);
+            background-image: url(images/3.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
         }
 
-        #navbar {
-            background: linear-gradient(to right, orange, rgb(233, 175, 68), rgb(212, 179, 117));}
+        .navbar.navbar-expand-lg {
+            background: linear-gradient(to right, rgb(15, 15, 14), rgb(56, 47, 30), rgb(63, 44, 7));}
 
-        .nav-item:hover {
+        .nav-link:hover {
             background-color: black;
-            color:aliceblue
+            color: white
         }
         
         ul {
@@ -34,45 +36,112 @@
         }
 
         #form {
+            color: white;
             border-radius: 10px 10px 10px 10px;
-            background: linear-gradient(to right, orange, rgb(233, 175, 68), rgb(212, 179, 117));
+            background: linear-gradient(to right, rgb(15, 15, 14), rgb(56, 47, 30), rgb(63, 44, 7));
         }
 
         a {
             text-decoration: solid black;
+            color: white;
         }
 
         p.sign-up {
             text-align: center;
         }
 
-        #pbg {
-            color: aliceblue;
+        a:hover {
+            color: white;
+            background-color: rgb(75, 72, 72);
+        }
+        
+        .nav-link {
+            color: white;
         }
 
-        h1 {
-            color: aliceblue;
+        .btn.btn-dark {
+            color: white;
         }
 
-        h1:hover {
+        .nav-link.active.active {
+            color: orange;
+        }
+
+        .navbar-brand:hover {
+            color: orange;
+        }
+
+        .navbar-brand {
+            color: white;
+        }
+
+        /* footer */
+        .form-control {
+            outline: none;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            height: 50px;
+        }
+
+        footer {
+            background: linear-gradient(to right, rgb(15, 15, 14), rgb(56, 47, 30), rgb(63, 44, 7));
+            font-size: 14px;
+            padding: 5em 0;
+            margin-bottom: 0;
+            color: rgb(170, 154, 125);
+        }
+
+        footer a {
+            color: rgb(170, 154, 125);
+            border-bottom: 1px solid transparent;
+        }
+
+        footer a:hover {
+            color: white;
+            border-bottom: 1px solid rgb(41, 39, 35);
+        }
+
+        footer h2 {
+            font-size: 22px;
+            margin-bottom: 28px;
+            letter-spacing: .05em;
+        }
+
+        footer .footer-link li {
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .footer-social a {
+            line-height: 0;
+            border-radius: 50%;
+            margin: 0 5px 5px 0;
+            border: 1px solid rgba(255, 255, 255,0.1);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        /* cards */
+
+        div.card-deck {
+            background: linear-gradient(to right, rgb(15, 15, 14), rgb(56, 47, 30), rgb(63, 44, 7));
+            border-radius: 10px 10px 10px 10px;
+            box-shadow: 0 0 15px rgb(235, 215, 180);
+        }
+
+        #order {
+            background-color: rgb(214, 141, 4);
             color: black;
-            background-color: rgb(141, 138, 138);
         }
 
-        h2:hover {
-            background-color: rgb(245, 179, 56);
+        #order:hover {
+            background-color: green;
         }
 
-        a.nav-link.active:hover {
-            color: aliceblue;
-        }
-
-        a.nav-link:hover {
-            color: aliceblue;
-        }
-
-        a.nav-link.disabled {
-            color: rgb(199, 211, 221);
+        #total {
+            text-align: left;
         }
     </style>
 </head>
@@ -82,7 +151,7 @@
         <div class="container-fluid" id="navbar">
             <a 
                 class="navbar-brand" 
-                href="indext.html">
+                href="index.html">
                 <img
                 src="images\PBCicon.png"
                 alt="logo"
@@ -97,16 +166,13 @@
             <div class="collapse navbar-collapse" id="navbar-resto">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="menu.html">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sign-up.html">Membership</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="reset.html" tabindex="-1">Account settings</a>
+                        <a class="nav-link" href="membership.html">Membership</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -114,7 +180,7 @@
                     type="search"
                     class="form-control"
                     placeholder="Are you craving for...?"/>
-                    <button class="btn btn-outline-dark" type="submit">
+                    <button class="btn btn-dark" type="submit">
                         <a href="menu.html">Search</a>
                     </button>
                 </form>
@@ -127,27 +193,27 @@
             <div class="col-lg-4">
                 <div class="card-deck" style="width: 100%">
                     <img class="card-img-top" src="images/ham&cheese.jpg" alt="">
-                    <div class="card-body">
+                    <div class="card-body pt-3 pb-3">
                         <h1>119.00 PHP</h1>
-                        <a href="#" class="btn btn-dark">Order</a>
+                        <a href="#" class="btn btn-dark">Add to cart</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="card-deck" style="width: 100%">
                     <img class="card-img-top" src="images/hawaiian.jpg" alt="">
-                    <div class="card-body">
+                    <div class="card-body pt-3 pb-3">
                         <h1>129.00 PHP</h1>
-                        <a href="#" class="btn btn-dark">Order</a>
+                        <a href="#" class="btn btn-dark">Add to cart</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="card-deck" style="width: 100%">
                     <img class="card-img-top" src="images/veggie.jpg" alt="">
-                    <div class="card-body">
+                    <div class="card-body pt-3 pb-3">
                         <h1>119.00 PHP</h1>
-                        <a href="#" class="btn btn-dark">Order</a>
+                        <a href="#" class="btn btn-dark">Add to cart</a>
                     </div>
                 </div>
             </div>
@@ -156,48 +222,68 @@
             <div class="col-lg-4">
                 <div class="card-deck" style="width: 100%">
                     <img class="card-img-top" src="images/COverload.jpg" alt="">
-                    <div class="card-body">
+                    <div class="card-body pt-3 pb-3">
                         <h1>119.00 PHP</h1>
-                        <a href="#" class="btn btn-dark">Order</a>
+                        <a href="#" class="btn btn-dark">Add to cart</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="card-deck" style="width: 100%">
                     <img class="card-img-top" src="images/meatypork.jpg" alt="">
-                    <div class="card-body">
+                    <div class="card-body pt-3 pb-3">
                         <h1>139.00 PHP</h1>
-                        <a href="#" class="btn btn-dark">Order</a>
+                        <a href="#" class="btn btn-dark">Add to cart</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="card-deck" style="width: 100%">
                     <img class="card-img-top" src="images/meatybeef.jpg" alt="">
-                    <div class="card-body">
+                    <div class="card-body pt-3 pb-3">
                         <h1>139.00 PHP</h1>
-                        <a href="#" class="btn btn-dark">Order</a>
+                        <a href="#" class="btn btn-dark">Add to cart</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 pt-3">
                 <div class="card-deck" style="width: 100%">
                     <img class="card-img-top" src="images/extreme.jpg" alt="">
-                    <div class="card-body">
+                    <div class="card-body pt-3 pb-3">
                         <h1>149.00 PHP</h1>
-                        <a href="#" class="btn btn-dark">Order</a>
+                        <a href="#" class="btn btn-dark">Add to cart</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 pt-3">
                 <div class="card-deck" style="width: 100%">
-                    <div class="card-body">
+                    <div class="card-body pt-3 pb-3">
                         <h1>Add ons</h1>
-                        <h2>Catsup = 5php</h2>
-                        <h2>Hotsauce = 5php</h2>
-                        <h2>Mozarella = 40php</h2>
-                        <h2>Double Toppings = 70php</h2>
-                        <a href="#" class="btn btn-dark">Order</a>
+                        <br>
+                        <h2>Catsup = 5php  <a href="#" class="btn btn-dark">Add to cart</a></h2>
+                        <br>
+                        <h2>Hotsauce = 5php  <a href="#" class="btn btn-dark">Add to cart</a></h2>
+                        <br>
+                        <h2>Parmesan = 40php  <a href="#" class="btn btn-dark">Add to cart</a></h2>
+                        <br>
+                        <h2>Mozarella = 40php  <a href="#" class="btn btn-dark">Add to cart</a></h2>
+                        <br>
+                        <h2>Double Toppings = 70php  <a href="#" class="btn btn-dark">Add to cart</a></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 pt-3">
+                <div class="card-deck" style="width: 100%">
+                    <div class="card-body pt-3 pb-3 ps-3">
+                        <h1 id="total">TOTAL : </h1>
+                        <hr>
+                        <label id="card" type="">Membership card # : </h1>
+                        <input type="text" placeholder="membership card number">
+                        <br>
+                        <label id="pwd" for="password">Password :</label>
+                        <input type="password" placeholder="********">
+                        <br>
+                        <button id="order" type="button" class="btn btn-dark btn-lg">ORDER NOW</button>
                     </div>
                 </div>
             </div>
@@ -205,26 +291,57 @@
     </div>
     <!-- footer -->
     <footer>
-        <div class="container-fluid text-center bg-dark">
-            <div class="row">
-                <div class="col-lg-12" id="pbg">
-                    <h1><img src="images/PBCicon.png" alt="logo" style="width: 50px"><a href="https://neomeister097.github.io/">https://neomeister097.github.io/ | +63 956 7960 321</a></h1>
-                </div>
-            </div>
-        </div>
+        <hr>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-5"></div>
-                <div class="col-lg-7 pe-3">
-                    <a href="https://www.facebook.com/neomeister">
-                    <img src="images\fb.png" alt="facebook page" style="width: 35px">
-                    </a>
-                    <a href="https://twitter.com/?lang=en">
-                    <img src="images\twtr.png" alt="twiter page" style="width: 30px">
-                    </a>
-                    <a href="https://www.instagram.com/neobrucal/">
-                    <img src="images\ig.png" alt="instagram page" style="width: 4.5%">
-                    </a>
+                <div class="col-lg">
+                    <h2>About us</h2>
+                    <p>A small family business born out of pandemic and love for pizza. PugonBizCo. offers 7 pizza flavors on its menu. We take pride 	in offering our own recipe and freshly baked pizza to 	customer’s doorstep.</p>
+                    <p><a href="home.html">Click here to learn more</a></p>
+                </div>
+
+                <div class="col-md-3 mb-5">
+                    <h2>Contact &amp; Address</h2>
+                    <ul class="list-unstyled footer-link">
+                        <li class="dflex">
+                            <span class="me-3">Address:</span>#125 Hollywood Compound Alagao Bauan Batangas
+                        </li>
+                        <li class="dflex">
+                            <span class="me-3">Phone:</span>0955 569 4342 / 0963 642 9895
+                        </li>
+                        <li class="dflex">
+                            <span class="me-3">Email:</span>pugonbizco@gmail.com
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-5">
+                    <h2>Quick links</h2>
+                    <ul class="list-unstyled footer-link">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Our pets</a></li>
+                        <li><a href="#">Blog articles</a></li>
+                        <li><a href="#">Contact us us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h2>Our social media</h2>
+                    <ul class="list-unstyled footer-link d-flex footer-social">
+                        <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.twiter.com"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-12 text md center text-center">
+                        <p>This template is inspired by Sir Daiben Sanchez</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -14,19 +14,21 @@
     <title>Pugon Biz Co.</title>
     <style>
         body {
+            color: white;
+            font-family: Copperplate, Papyrus, fantasy;
             position: relative;
-            background-image: url(images/bg.png);
+            background-image: url(images/3.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
         }
 
-        #navbar {
-            background: linear-gradient(to right, orange, rgb(233, 175, 68), rgb(212, 179, 117));}
+        .navbar.navbar-expand-lg {
+            background: linear-gradient(to right, rgb(15, 15, 14), rgb(56, 47, 30), rgb(63, 44, 7));}
 
-        .nav-item:hover {
+        .nav-link:hover {
             background-color: black;
-            color:aliceblue
+            color: white
         }
         
         ul {
@@ -34,32 +36,88 @@
         }
 
         #form {
+            color: white;
             border-radius: 10px 10px 10px 10px;
-            background: linear-gradient(to right, orange, rgb(233, 175, 68), rgb(212, 179, 117));
+            background: linear-gradient(to right, rgb(15, 15, 14), rgb(56, 47, 30), rgb(63, 44, 7));
         }
 
         a {
             text-decoration: solid black;
+            color: white;
         }
 
         p.sign-up {
             text-align: center;
         }
 
-        #pbg {
-            color: aliceblue;
+        a:hover {
+            color: white;
+            background-color: rgb(75, 72, 72);
+        }
+        
+        .nav-link {
+            color: white;
         }
 
-        a.nav-link.active:hover {
-            color: aliceblue;
+        .btn.btn-dark {
+            color: white;
         }
 
-        a.nav-link:hover {
-            color: aliceblue;
+        .navbar-brand {
+            color: orange;
         }
 
-        a.nav-link.disabled {
-            color: rgb(199, 211, 221);
+        .navbar-brand:hover {
+            color: white;
+            background-color: black;
+        }
+
+        /* footer */
+        .form-control {
+            outline: none;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            height: 50px;
+        }
+
+        footer {
+            background: linear-gradient(to right, rgb(15, 15, 14), rgb(56, 47, 30), rgb(63, 44, 7));
+            font-size: 14px;
+            padding: 5em 0;
+            margin-bottom: 0;
+            color: rgb(170, 154, 125);
+        }
+
+        footer a {
+            color: rgb(170, 154, 125);
+            border-bottom: 1px solid transparent;
+        }
+
+        footer a:hover {
+            color: white;
+            border-bottom: 1px solid rgb(41, 39, 35);
+        }
+
+        footer h2 {
+            font-size: 22px;
+            margin-bottom: 28px;
+            letter-spacing: .05em;
+        }
+
+        footer .footer-link li {
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .footer-social a {
+            line-height: 0;
+            border-radius: 50%;
+            margin: 0 5px 5px 0;
+            border: 1px solid rgba(255, 255, 255,0.1);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            display: inline-block;
         }
     </style>
 </head>
@@ -69,7 +127,7 @@
         <div class="container-fluid" id="navbar">
             <a 
                 class="navbar-brand" 
-                href="indext.html">
+                href="index.html">
                 <img
                 src="images\PBCicon.png"
                 alt="logo"
@@ -84,16 +142,13 @@
             <div class="collapse navbar-collapse" id="navbar-resto">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="menu.html">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sign-up.html">Membership</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="reset.html" tabindex="-1">Account settings</a>
+                        <a class="nav-link" href="membership.html">Membership</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -101,7 +156,7 @@
                     type="search"
                     class="form-control"
                     placeholder="Are you craving for...?"/>
-                    <button class="btn btn-outline-dark" type="submit">
+                    <button class="btn btn-dark" type="submit">
                         <a href="menu.html">Search</a>
                     </button>
                 </form>
@@ -109,148 +164,114 @@
         </div>
     </nav>
     <!-- log in form -->
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <img src="images/PBC.png" alt="Pugon Biz Co." style="width: 100%">
+            </div>
+        </div>
+    </div>
     <div class="container pt-4 pb-4">
         <div class="row">
-            <div class="col-lg-2"></div>
+            <div class="col-lg-4"></div>
             <div class="col-lg-4">
                 <form>
                     <div id="form" class="form-group bg-light">
-                        <h1>Sign in</h1>
+                        <h1>Welcome</h1>
                         <p>Get exclusive deals and easy ordering access.</p>
                         <div>
-                        <ul>
-                            <li>
-                                <input 
-                                    type="username"
-                                    class="form-control"
-                                    id="username"
-                                    placeholder="Username"
+                            <input 
+                                type="username"
+                                class="form-control"
+                                id="username"
+                                placeholder="Username"
                                 >
-                            </li>
-                            <li>
-                                <input 
-                                    type="password"
-                                    class="form-control"
-                                    id="pwd"
-                                    placeholder="Password"
+                            <input 
+                                type="password"
+                                class="form-control"
+                                id="pwd"
+                                placeholder="Password"
                                 >
-                            </li>
-                            <li>
+                            <div>
                                 <a href="account-settings.html">Forgot password?</a>
-                            </li>
-                            <li>
-                                <button 
-                                    type="submit" 
-                                    class="btn btn-outline-dark">Sign in
-                                </button>
-                            </li>
+                            </div>
+                            <button 
+                                type="submit" 
+                                class="btn btn-dark">Sign in
+                            </button>
                             <hr>
-                            <li>
-                                <button 
-                                    type="submit" 
-                                    class="btn btn-outline-light"><a href="https://myaccount.google.com">Sign in with Google</a>
-                                </button>
-                            </li>
-                            <li>
-                                <button 
-                                    type="submit" 
-                                    class="btn btn-outline-light"><a href="https://www.facebook.com">Sign in with Facebook</a>
-                                </button>
-                            </li>
-                        </ul>
-                        <div>
-                            <p class="sign-up">Not a member?<span><a href="sign-up.html">Sign up now</a></span></p>
+                            <button 
+                                type="submit" 
+                                class="btn btn-dark"><a href="https://myaccount.google.com">Sign in with Google</a>
+                            </button>
+                            <br>
+                            <button 
+                                type="submit" 
+                                class="btn btn-dark"><a href="https://www.facebook.com">Sign in with Facebook</a>
+                            </button>
+                            <div>
+                                <p class="sign-up">Not a member? <span><a href="sign-up.html">Sign up now</a></span></p>
+                            </div>
                         </div>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="images/PBC.png" alt="Pugon Biz Co." style="width: 400px">
-                    </div>
+                    </div>    
                 </form>
-            </div>
-            <!-- carousel -->
-            <div class="col-lg-6">
-                <div 
-                    id="carousel-captions"
-                    class="carousel slide"
-                    data-bs-interval="3500"
-                    data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button 
-                            type="button"
-                            data-bs-target="#carousel-captions"
-                            data-bs-slide-to="0"
-                            class="active">
-                        </button>
-                        <button 
-                            type="button"
-                            data-bs-target="#carousel-captions"
-                            data-bs-slide-to="1">
-                        </button>
-                        <button 
-                            type="button"
-                            data-bs-target="#carousel-captions"
-                            data-bs-slide-to="2">
-                        </button>
-                    </div>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img 
-                            src="images/float.png"
-                            class="d-block"
-                            alt="come">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1>Fresh & homemade</h1>
-                            <p>Ingredients is daily prepared</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img 
-                            src="images/float2.jpg"
-                            alt="comment"
-                            class="d-block">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1>Come & visit</h1>
-                            <p>Open from 3pm - 10pm Tuesday - Sunday</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img 
-                            src="images/float3.jpg"
-                            alt="comment"
-                            class="d-block">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1>We Deliver</h1>
-                            <p>Free delivery for all PATRONAGE membership</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     <!-- footer -->
     <footer>
-        <div class="container-fluid text-center bg-dark">
-            <div class="row">
-                <div class="col-lg-12" id="pbg">
-                    <h1><img src="images/PBCicon.png" alt="logo" style="width: 50px"><a href="https://neomeister097.github.io/">https://neomeister097.github.io/ | +63 956 7960 321</a></h1>
-                </div>
-            </div>
-        </div>
+        <hr>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-5"></div>
-                <div class="col-lg-7 pe-3">
-                    <a href="https://www.facebook.com/neomeister">
-                    <img src="images\fb.png" alt="facebook page" style="width: 35px">
-                    </a>
-                    <a href="https://twitter.com/?lang=en">
-                    <img src="images\twtr.png" alt="twiter page" style="width: 30px">
-                    </a>
-                    <a href="https://www.instagram.com/neobrucal/">
-                    <img src="images\ig.png" alt="instagram page" style="width: 4.5%">
-                    </a>
+                <div class="col-lg">
+                    <h2>About us</h2>
+                    <p>A small family business born out of pandemic and love for pizza. PugonBizCo. offers 7 pizza flavors on its menu. We take pride 	in offering our own recipe and freshly baked pizza to 	customer’s doorstep.</p>
+                    <p><a href="home.html">Click here to learn more</a></p>
+                </div>
+
+                <div class="col-md-3 mb-5">
+                    <h2>Contact &amp; Address</h2>
+                    <ul class="list-unstyled footer-link">
+                        <li class="dflex">
+                            <span class="me-3">Address:</span>#125 Hollywood Compound Alagao Bauan Batangas
+                        </li>
+                        <li class="dflex">
+                            <span class="me-3">Phone:</span>0955 569 4342 / 0963 642 9895
+                        </li>
+                        <li class="dflex">
+                            <span class="me-3">Email:</span>pugonbizco@gmail.com
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mb-5">
+                    <h2>Quick links</h2>
+                    <ul class="list-unstyled footer-link">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Our pets</a></li>
+                        <li><a href="#">Blog articles</a></li>
+                        <li><a href="#">Contact us us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h2>Our social media</h2>
+                    <ul class="list-unstyled footer-link d-flex footer-social">
+                        <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.twiter.com"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="col-12 text md center text-center">
+                        <p>This template is inspired by Sir Daiben Sanchez</p>
+                    </div>
                 </div>
             </div>
         </div>
