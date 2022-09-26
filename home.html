@@ -21,6 +21,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
+            box-shadow: 0 0 15px rgb(235, 215, 180);
         }
 
         .navbar.navbar-expand-lg {
@@ -68,7 +69,8 @@
         }
 
         .navbar-brand:hover {
-            color: orange;
+            color: white;
+            background-color: black;
         }
 
         .nav-link.active.active {
@@ -446,8 +448,8 @@
 
     <div class="container pt-5 pb-5">
         <div class="row">
-            <div class="col-lg-6">
-                <form class="contact">
+            <div class="col-lg-6 pt-3 pe-3 ps-3 pb-3">
+                <form class="col pt-3 pe-3 ps-3 pb-3" id="form">
                     <div id="form" class="form-group bg-light">
                         <h10>WE LOVE TO HEAR YOUR THOUGHTS/SUGGESTIONS</h10>
                         <H1>Get in Touch With Us</H1>
@@ -458,26 +460,27 @@
                                 class="form-control"
                                 id="name"
                                 placeholder="Your First & Last Name"
-                                >
+                                ><br>
 
                             <input 
                                 type="email"
                                 class="form-control"
                                 id="email"
                                 placeholder="Your E-Mail Address*"
-                                >
+                                ><br>
 
                             <input 
                                 type="email"
                                 class="form-control"
                                 id="phone-number"
                                 placeholder="Your Phone Number*"
-                                >
+                                ><br>
                             
                             <textarea 
                                 class="textarea"
-                                placeholder="Please write you concerns here">
-                            </textarea>
+                                placeholder="Please write you concerns here"
+                                style="width: 100%">
+                            </textarea><br>
                                 
                             <button 
                                 type="submit" 
@@ -545,7 +548,7 @@
                 <hr>
                 <div class="row">
                     <div class="col-12 text md center text-center">
-                        <p>This template is inspired by Sir Daiben Sanchez</p>
+                        <p><img src="images/PBCicon.png" alt="PugonBizCo" style="width: 20px"> | All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
